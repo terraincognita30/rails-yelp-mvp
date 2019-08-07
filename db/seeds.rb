@@ -3,5 +3,12 @@
 #
 # Examples:
 #
+10.times do
+@restaurant = Restaurant.create([{name: Faker::Name.name, address: Faker::Address.full_address,
+category: "italian"}])
+
+@review = Review.create([{content: Faker::Lorem.words, rating: 5}])
+end
+
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
